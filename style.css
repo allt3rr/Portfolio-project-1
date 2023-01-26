@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+/*index.html - css code*/
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    min-width: 800px;
+}
+#wrapper{
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+/*landing page*/
+#header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.header-text > h1,h2{
+    color:white;
+    font-size: 6em;
+    text-shadow: 4px 4px 10px black;
+}
+.header-text > h2{
+    margin-bottom: 40px;
+}
+.header-text>h1{
+    padding-bottom: 10px;
+}
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2);
+}
+/*arrow on landing page*/
+#arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 1.5s ease-out infinite;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+a[href]{
+    position: relative;
+}
+#arrow-box
+{
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgba(255,255,255,0.5);
+    overflow: hidden;
+    animation: rotate 2s linear infinite;
+}
+#left-arrow{
+    border-bottom: 3px solid white;
+    width: 40px;
+    position: absolute;
+    transform: rotate(45deg) translate(-13px,8px);
+    border-radius: 2px;
+}
+#middle-arrow{
+    border-bottom: 3px solid white;
+    width: 60px;
+    position: absolute;
+    transform: rotate(90deg);
+    top: -20px;
+    border-radius: 1px;
+}
+#right-arrow{
+    border-bottom: 3px solid white;
+    width: 40px;
+    position: absolute;
+    transform: rotate(-45deg) translate(13px,8px);
+    border-radius: 2px;
+}
+/*menu with board*/
+#upper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+#board{
+    position: absolute;
+    transform: translate(0,-10px);
+}
+#menu{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    width: 550px;
+    position: relative;
+    font-size: 2.5em;
+    transform: translate(40px, 110px);
+}
+#menu1{
+    transform: rotate(-5deg) translate(40px);
+}
+#menu2{
+    transform: translateY(45px);
+    font-size: 32px;
+}
+#menu3{
+    transform: rotate(5deg) translate(-50px);
+}
+#menu1:hover, #menu2:hover, #menu3:hover{
+    color:black;
+}
+.menu-item{
+    cursor: pointer;
+    color: white;
+}
+.menu-item>a{
+    text-decoration: none;
+    color:inherit;
+    font-family: 'Cookie';
+}
+/*down site*/
+#white-span{
+    border: 1px solid white;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#down-site{
+    width: 100%;
+    height: 100vh;
+    background: url(images/kawiarnia.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+/*List with prices*/
+.price_list{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    left: -270px;
+    transition: left 0.2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/notes.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+.price_list:hover{
+    left: 0px;
+}
+#price_list>table{
+    position: absolute;
+}
+#price_list>table,td,th{
+    padding: 10px;
+    font-size: 20px;
+}
+#sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    flex-wrap: wrap;
+    width: 0px;
+    padding: 15px;
+    color: aliceblue;
+    text-transform: uppercase;
+    background: grey;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: left 0.2 linear;
+    z-index: 1;
+}
+/*desk with products, bill and cart*/
+#lower{
+    transform-style: preserve-3d;
+    position: relative;
+    background: url(images/blat.jpg);
+    height: 70vh;
+    position: relative;
+}
+#item1, #item5{
+    position: absolute;
+    top:0px;
+    left:450px;
+    width: 40px;
+    transform:  rotateZ(25deg) scale(1);
+}
+#item2, #item6{
+    position: absolute;
+    top:10px;
+    left:610px;
+    width: 120px;
+    transform:  rotateZ(20deg) scale(0.7);
+}
+#item3, #item7{
+    position: absolute;
+    top:150px;
+    left:250px;
+    width: 100px;
+    transform:  rotateZ(20deg);
+}
+#item4, #item8{
+    position: absolute;
+    top:10px;
+    left:150px;
+    width: 100px;
+}
+.item{
+    box-shadow: 3px 3px 60px;
+    border-radius: 100%; 
+}
+/*cart*/
+.cart, #counter{
+    position: absolute;
+    top: -120px;
+    right: 70px;
+}
+#counter{
+    height: 40px;
+    width: 40px;
+    background: #e60000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 25px;
+    border-radius: 20px;
+    top: -20px;
+    right: 270px;
+    z-index: 1;
+}
+/*bill*/
+#bill{
+    background: #dfe6e0;
+    height: auto;
+    width: 200px;
+    right: 400px;
+    top: 60px;
+    position: absolute;
+    box-shadow: 2px 2px 10px;
+    cursor: default;
+}
+#bill>#layout{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    font-size: 13px;
+}
+#bill>#layout>h6{
+    align-self: flex-start;
+    padding-left: 5px;
+}
+#bill>#layout>h4{
+    padding: 5px;
+}
+#bill-btn{
+    position: absolute;
+    top: 40px;
+    right: 145px;
+    width: 100px;
+    padding: 5px;
+    font-family: monospace;
+    background: dimgrey;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.18s ease;
+}
+#bill-btn:hover{
+    box-shadow: 1px 1px 10px black;
+    transform: translate(-2px, -2px);
+}
+#bill-btn:active{
+    transition: none;
+    transform: translate(0px, 0px);
+}
+/*keyframes*/
+@keyframes animate{
+    0%{
+        transform: translateY(10px);
+        opacity: 50%;
+    }
+    50%{
+        transform: translateY(20px);
+        opacity: 90%;
+    }
+    100%{
+        transform: translateY(10px);
+        opacity: 50%;
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+        border-bottom-color: rgba(255,255,255,1);
+    }
+    100%{
+        transform: rotate(360deg);
+        border-bottom-color: rgba(255,255,255,1);
+    }
+}
+/*O_nas.html - css code*/
+#site{
+    height: 100vh;
+    background: url(images/kawiarnia.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#site>#container>img{
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px;
+}
+#site #container p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 25px;
+    font-family: 'Cookie';
+    font-size: 1.7em;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+#container{
+    position: relative;
+}
+#button{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    width: 70px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: bottom 0.2s, opacity 0.2s linear;
+    opacity: 0;
+    background-color: currentColor;
+}
+#button a{
+    text-decoration: none;
+    color: beige;
+}
+#site>#container>p:hover + #button,#button:hover{
+    bottom: -20px;
+    opacity: 1;
+}
+/*christmas.html - code*/
+/*menu*/
+#oferta{
+    transform: translate(20px, -10px);
+    font-family: 'Cookie';
+    font-size: 50px;
+    background: linear-gradient(red, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+    animation: textanim 5s linear infinite;
+}
+/*przycisk powrót*/
+#button1{
+    transform: translate(77px, 75px);
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    height: 25px;
+    cursor: pointer;
+    padding: 3px;
+    box-shadow: 0px 0px 10px;
+}
+/*snieg na menu*/
+#snieg1{
+    position: absolute;
+    transform: translate(0px, 60px);
+    z-index: 1;
+    width: 530px;
+}
+/*snieg na blacie*/
+.snieg2{
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    z-index: 1;
+}
+.snieg3{
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    z-index: 1;
+}
+/*cennik*/
+.price_list>#bombka1,#bombka2{
+    width: 50px;
+    position: absolute;
+    bottom: -60px;
+    left: 40px;
+}
+#bombka2{
+    left: 190px;
+}
+#snieg_gora{
+    position: absolute;
+    width: 300px;
+    top: -2px;
+}
+body.sidebar sidebar1{
+    background: #e60000;
+}
+/*produkty*/
+#item5{
+    transform: rotateZ(15deg) scale(2);
+    top: 100px;
+    left: 220px;
+}
+#item6{
+    transform: scale(1.5);
+    top: 190px;
+    left: 320px;
+}
+#item7{
+    transform: rotateZ(10deg) scale(1);
+    top: 60px;
+    left: 550px;
+}
+#item8{
+    transform: rotateZ(-1deg) scale(3.2);
+    top: 160px;
+    left: 850px;
+}
+#snowflakes{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/*snieg na ekranie*/
+#snow-animation-container{
+    z-index: 999;
+}
+#audio{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/*keyframes*/
+@keyframes textanim{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}

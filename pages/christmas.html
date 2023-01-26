@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <title>Piekarnia Baker</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="jQuery/jquery-ui-1.13.2.custom/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+    </head>
+    <body>
+          <audio autoplay>
+              <source src="../audio/mikolaj.mp3" type="audio/mp3">
+          </audio>
+           <div id="wrapper">
+            <div id="down-site">
+                <div id="snow-animation-container"></div>
+                <div id="upper">
+                  <div class="price_list">
+                      <table>
+                          <tr><th colspan="2">Ceny produktów</th></tr>
+                          <tr><td>Sernik</td><td>14.99zł/100g</td></tr>
+                          <tr><td>Ciastko z polewą</td><td>3,99zł/100g</td></tr>
+                          <tr><td>Bułeczki kawowe</td><td>1.79zł/100g</td></tr>
+                          <tr><td>Bułka drożdżowa</td><td>3.89zł</td></tr>
+                      </table>
+                      <span id="sidebar" class="sidebar1">C e n y &nbsp;&nbsp; p r o d u k t ó w</span>
+                      <img src="../christmas/bombka.png" alt="..." id="bombka1">
+                      <img src="../christmas/bombka.png" alt="..." id="bombka2">
+                      <img src="../christmas/snieg4.png" alt="..." id="snieg_gora">
+                  </div>
+                   <img src="../images/board.png" id="board">
+                   <img src="../christmas/snieg4.png" alt="snieg" id="snieg1">
+                        <ul id="menu">
+                           <li id="oferta">Oferta świateczna</li>
+                            <li id="button1">Powrót</li>
+                        </ul>
+                </div>
+                    <div id="lower">
+                      <img src="../christmas/snieg5.png" alt="snieg" class="snieg2">
+                      <img src="../christmas/snieg5.png" alt="snieg" class="snieg3">
+                       <span>
+                           <img class="cart" src="../items/kosz.png">
+                           <span id="counter"></span>
+                       </span>
+                        <img id="item5" nazwa="bulka-drozdzowa" src="../christmas/bulka1.png" class="item1">
+                        <img id="item6" nazwa="buleczki-kawowe" src="../christmas/bulka2.png" class="item1">
+                        <img id="item7" nazwa="ciastko-z-polewą" src="../christmas/ciastko.png" class="item1">
+                        <img id="item8" nazwa="sernik" src="../christmas/ciasto.png" class="item1">
+                        <button id="bill-btn">Pokaż rachunek</button>
+                        <div id="bill">
+                            <span id="layout">
+                                <h4>Rachunek</h4>
+                                <h6>Sklep: Piekarnia Baker<br>Adres: Sezamkowa 22, 56-127 Neopolice</h6>
+                                ---------------------------------------------
+                                <h6>Tel: 687473822<br>Data: 16.02.2004</h6>
+                                ---------------------------------------------
+                                <p id="bought-items">Bułki 1.6zl</p>
+                                ---------------------------------------------
+                                <h4 id="total">Łącznie: 0zł</h4>
+                            </span>
+                        </div>
+                    </div>   
+            </div>
+           </div>
+<!--
+        <audio controls autoplay>
+            <audio src="../audio/mikolaj.mp3" type="audio/mpeg">
+            <audio src="../audio/mikolaj.ogg" type="audio/ogg">
+        </audio>
+-->
+<!--        <audio id="audio" src="audio/mikolaj.mp3" autoplay></audio>-->
+        <script src="../jQuery/jquery-3.6.2.js"></script>
+        <script src="../jQuery/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+        <script src="../scripts/christmas.js"></script>
+        <script src="../scripts/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../realistic-snow-falling-gsap/snow.js"></script>
+        <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-   1']);
+    _gaq.push(['_setDomainName',  'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga =    document.createElement('script');  ga.type = 'text/javascript'; ga.async =  true;
+        ga.src = ('https:' ==   document.location.protocol ?  'https://ssl' : 'http://www') +  '.google-analytics.com/ga.js';
+        var s =     document.getElementsByTagName('script') [0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+</script>
+<!--        <script src="snow.js"></script>-->
+    </body>
+</html>

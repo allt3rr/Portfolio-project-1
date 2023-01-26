@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <title>Piekarnia Baker</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jQuery/jquery-ui-1.13.2.custom/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+    </head>
+    <body>
+           <div id="wrapper">
+            <div id="header">
+                <img src="images/bagiety.jpg" class="background">
+                <div class="header-text">
+                <h1>Piekarnia Baker</h1>
+                <h2>Świeżo i tanio</h2>
+                <a href="#lower">
+                    <span id="arrow-box"></span>
+                    <span id="arrow">
+                        <span id="left-arrow"></span>
+                        <span id="right-arrow"></span>
+                        <span id="middle-arrow"></span>
+                    </span>
+                </a>
+                </div> 
+            </div>
+            <div id="down-site">
+               <span id="white-span"></span>
+                <div id="upper">
+                  <div class="price_list">
+                      <table>
+                          <tr><th colspan="2">Ceny produktów</th></tr>
+                          <tr><td>Bagietka</td><td>1.89 zł</td></tr>
+                          <tr><td>Bułka mała</td><td>0.80 zł</td></tr>
+                          <tr><td>Chleb</td><td>1.99</td></tr>
+                          <tr><td>Bułka z posypką</td><td>2.89</td></tr>
+                      </table>
+                      <span id="sidebar">C e n y &nbsp;&nbsp; p r o d u k t ó w</span>
+                  </div>
+                   <img src="images/board.png" id="board">
+                    <ul id="menu">
+                        <li id="menu1" class="menu-item"><a href="pages/o_nas.html" target="_blank">O nas</a></li>
+                        <li id="menu2" class="menu-item"><a href="pages/christmas.html" target="_blank">Specjały świąteczne</a></li>
+                        <li id="menu3" class="menu-item"><a href="pages/kontakt.html" target="_blank">Kontakt</a></li>
+                    </ul>
+                </div>
+                    <div id="lower">
+                       <span>
+                           <img class="cart" src="items/kosz.png">
+                           <span id="counter"></span>
+                       </span>
+                        <img id="item1" nazwa="bagietka" class="item" src="items/bagieta.png">
+                        <img id="item2" nazwa="chleb" class="item" src="items/bulka.png">
+                        <img id="item3" nazwa="bulka-mala" class="item" src="items/bulka_mala.png">
+                        <img id="item4" nazwa="bulka-posypka" class="item" src="items/bulka_posypka.png">
+                        <button id="bill-btn">Pokaż rachunek</button>
+                        <div id="bill">
+                            <span id="layout">
+                                <h4>Rachunek</h4>
+                                <h6>Sklep: Piekarnia Baker<br>Adres: Sezamkowa 22, 56-127 Neopolice</h6>
+                                ---------------------------------------------
+                                <h6>Tel: 687473822<br>Data: 16.02.2004</h6>
+                                ---------------------------------------------
+                                <p id="bought-items">Bułki 1.6zl</p>
+                                ---------------------------------------------
+                                <h4 id="total">Łącznie: 0zł</h4>
+                            </span>
+                        </div>
+                    </div>                
+            </div>
+           </div>
+        <script src="jQuery/jquery-3.6.2.js"></script>
+        <script src="jQuery/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
